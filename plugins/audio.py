@@ -20,7 +20,7 @@ async def play(client, m: Message):
     media = m.reply_to_message
     if not media and not ' ' in m.text:
         await m.reply_text(
-            "💁🏻‍♂️ Do you want to search for a YouTube video?",
+            "📹 Do you want to search for a YouTube video?",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -110,7 +110,7 @@ async def play(client, m: Message):
             await group_call.join(chat_id)
             await group_call.start_audio(audio, repeat=False)
             AUDIO_CALL[chat_id] = group_call
-            await msg.edit(f"▶️ **Started [Audio Streaming](https://t.me/AsmSafone) !**", disable_web_page_preview=True)
+            await msg.edit(f"▶️ **Started [Audio Streaming](https://t.me/Zer0ByteOfficial) !**", disable_web_page_preview=True)
         except Exception as e:
             await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
 
@@ -125,6 +125,6 @@ async def restart(client, m: Message):
     await sleep(3)
     os.execl(sys.executable, sys.executable, *sys.argv)
     try:
-        await k.edit("✅ **Restarted Successfully! \nJoin @AsmSafone For More!**")
+        await k.edit("✅ **Restarted Successfully! \nJoin @Zer0ByteOfficial For More!**")
     except:
         pass
