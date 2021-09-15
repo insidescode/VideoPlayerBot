@@ -49,7 +49,7 @@ async def stream(client, m: Message):
     media = m.reply_to_message
     if not media and not ' ' in m.text:
         await m.reply_text(
-            "💁🏻‍♂️ Do you want to search for a YouTube video?",
+            "📹 Do you want to search for a YouTube video?",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -101,7 +101,7 @@ async def stream(client, m: Message):
                 await group_call.join(chat_id)
                 await group_call.start_video(ytstream, with_audio=True, repeat=False)
                 VIDEO_CALL[chat_id] = group_call
-                await msg.edit(f"▶️ **Started [YouTube Video Streaming]({query}) !**", disable_web_page_preview=True)
+                await msg.edit(f"▶️ **Started [YouTube Video Streaming](https://t.me/Zer0ByteOfficial) !**", disable_web_page_preview=True)
             except Exception as e:
                 await msg.edit(f"❌ **An Error Occoured!** \n\nError: `{e}`")
         else:
@@ -112,7 +112,7 @@ async def stream(client, m: Message):
                 await group_call.join(chat_id)
                 await group_call.start_video(livestream, with_audio=True, repeat=False)
                 VIDEO_CALL[chat_id] = group_call
-                await msg.edit(f"▶️ **Started [Live Video Streaming]({query}) !**", disable_web_page_preview=True)
+                await msg.edit(f"▶️ **Started [Live Video Streaming](https://t.me/Zer0ByteOfficial) !**", disable_web_page_preview=True)
             except Exception as e:
                 await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
 
@@ -139,7 +139,7 @@ async def stream(client, m: Message):
             await group_call.join(chat_id)
             await group_call.start_video(video, with_audio=True, repeat=False)
             VIDEO_CALL[chat_id] = group_call
-            await msg.edit(f"▶️ **Started [Video Streaming](https://t.me/AsmSafone) !**", disable_web_page_preview=True)
+            await msg.edit(f"▶️ **Started [Video Streaming](https://t.me/Zer0ByteOfficial) !**", disable_web_page_preview=True)
         except Exception as e:
             await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
 
@@ -198,7 +198,7 @@ async def endstream(client, m: Message):
         await msg.edit("⏹️ **Stopped Video Streaming !**")
 
     else:
-        await msg.edit("🤖 **Please Start An Stream First !**")
+        await msg.edit(" **Please Start The VC First !**")
 
 
 # pytgcalls handlers
