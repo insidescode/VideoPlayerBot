@@ -26,11 +26,11 @@ from youtubesearchpython import VideosSearch
 
 buttons = [
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/SafoTheBot"),
+                InlineKeyboardButton("CHANNEL", url="https://t.me/Zer0ByteOfficial"),
+                InlineKeyboardButton("SUPPORT", url="https://t.me/Beluga_chat"),
             ],
             [
-                InlineKeyboardButton("🤖 MAKE YOUR OWN BOT 🤖", url="https://heroku.com/deploy?template=https://github.com/AsmSafone/VideoPlayerBot"),
+                InlineKeyboardButton("Source Code?", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"),
             ]
          ]
 
@@ -40,8 +40,8 @@ async def search(client, query):
     if query.query == "SAF_ONE":
         answers.append(
             InlineQueryResultArticle(
-                title="Deploy Own Video Player Bot",
-                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@AsmSafone | @SafoTheBot 👑</b>", disable_web_page_preview=True),
+                title="What Doin' Here?",
+                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@Zer0ByteOfficial | @Deeprajk 💎</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
@@ -52,7 +52,7 @@ async def search(client, query):
         await client.answer_inline_query(
             query.id,
             results=answers,
-            switch_pm_text=("✍️ Type An Video Name!"),
+            switch_pm_text=("Type Video Name!"),
             switch_pm_parameter="help",
             cache_time=0
         )
