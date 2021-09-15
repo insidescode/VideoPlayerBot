@@ -101,7 +101,7 @@ async def stream(client, m: Message):
                 await group_call.join(chat_id)
                 await group_call.start_video(ytstream, with_audio=True, repeat=False)
                 VIDEO_CALL[chat_id] = group_call
-                await msg.edit(f"▶️ **Started [YouTube Video Streaming](https://t.me/Zer0ByteOfficial) !**", disable_web_page_preview=True)
+                await msg.edit(f"▶️ **Started [YouTube Video Streaming]({query}) !**", disable_web_page_preview=True)
             except Exception as e:
                 await msg.edit(f"❌ **An Error Occoured!** \n\nError: `{e}`")
         else:
@@ -112,7 +112,7 @@ async def stream(client, m: Message):
                 await group_call.join(chat_id)
                 await group_call.start_video(livestream, with_audio=True, repeat=False)
                 VIDEO_CALL[chat_id] = group_call
-                await msg.edit(f"▶️ **Started [Live Video Streaming](https://t.me/Zer0ByteOfficial) !**", disable_web_page_preview=True)
+                await msg.edit(f"▶️ **Started [Live Video Streaming]({query}) !**", disable_web_page_preview=True)
             except Exception as e:
                 await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
 
